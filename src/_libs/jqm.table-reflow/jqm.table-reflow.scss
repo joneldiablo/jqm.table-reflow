@@ -1,0 +1,109 @@
+.ui-table-reflow {
+	td .ui-table-cell-label {
+		display: none;
+	}
+	th .ui-table-cell-label {
+		display: none;
+	}
+}
+@media only all {
+	.ui-table-reflow {
+		thead {
+			td {
+				display: none;
+			}
+			th {
+				display: none;
+			}
+		}
+		td {
+			text-align: left;
+			display: block;
+			.ui-table-cell-label {
+				padding: .4em;
+				min-width: 30%;
+				display: inline-block;
+				margin: -.4em 1em -.4em -.4em;
+			}
+			.ui-table-cell-label-top {
+				display: block;
+				padding: .4em 0;
+				margin: .4em 0;
+				text-transform: uppercase;
+				font-size: .9em;
+				font-weight: normal;
+			}
+		}
+		th {
+			text-align: left;
+			display: block;
+			.ui-table-cell-label {
+				padding: .4em;
+				min-width: 30%;
+				display: inline-block;
+				margin: -.4em 1em -.4em -.4em;
+			}
+			.ui-table-cell-label-top {
+				display: block;
+				padding: .4em 0;
+				margin: .4em 0;
+				text-transform: uppercase;
+				font-size: .9em;
+				font-weight: normal;
+			}
+		}
+		tbody th {
+			margin-top: 3em;
+		}
+	}
+}
+@media screen and(min-width: 35em), print {
+	.ui-table-reflow {
+		td {
+			display: table-cell;
+			.ui-table-cell-label {
+				display: none;
+			}
+		}
+		th {
+			display: table-cell;
+			.ui-table-cell-label {
+				display: none;
+			}
+		}
+		tbody {
+			th {
+				display: table-cell;
+			}
+			td {
+				display: table-cell;
+			}
+		}
+		thead {
+			td {
+				display: table-cell;
+			}
+			th {
+				display: table-cell;
+			}
+		}
+	}
+}
+@media screen and(max-width: 35em) {
+	.ui-table-reflow {
+		td {
+			width: 100%;
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: border-box;
+			float: left;
+			clear: left;
+		}
+		th {
+			width: 100%;
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: border-box;
+			float: left;
+			clear: left;
+		}
+	}
+}
